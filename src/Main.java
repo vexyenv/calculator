@@ -10,18 +10,19 @@ public class Main {
         System.out.print("Choose an operator [+,-,/,*,%]: ");
         String c = scn.next();
 
-        if (c.equals("+")) {
-            System.out.println("Sum is = " + (a + b));
-        } else if (c.equals("-")) {
-            System.out.println("Difference is = " + (a - b));
-        } else if (c.equals("*")) {
-            System.out.println("Product is = " + (a * b));
-        } else if (c.equals("/")) {
-            System.out.println("Quotient is = " + (a / b));
-        } else if (c.equals("%")) {
-            System.out.println("Remainder is = " + (a % b));
-        } else {
-            System.out.println("Invalid Operator");
+        switch (c) {
+            case "+":
+                System.out.println("Sum is = " + (a + b));
+            case "-":
+                System.out.println("Difference is = " + (a - b));
+            case "/":
+                System.out.println("Quotient is = " + (a / b));
+            case "*":
+                System.out.println("Product is = " + (a * b));
+            case "%":
+                System.out.println("Remainder is = " + (a % b));
+            default:
+                System.out.println("Invalid Choice!");
         }
     }
 }
