@@ -1,0 +1,38 @@
+# === IntelliJ IDEA ===
+.idea/
+*.iml
+out/
+!src/**/out/
+
+# === Java class files ===
+*.class
+
+# === Eclipse ===
+.apt_generated/
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans/
+.sts4-cache/
+bin/
+!src/**/bin/
+
+# === NetBeans ===
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# === VS Code ===
+.vscode/
+
+# === macOS ===
+.DS_Store
+
+# === Build tools ===
+target/
+build/
+.gradle/
+.mvn/
