@@ -4,7 +4,7 @@ A simple command-line calculator built in Java. This is my first version — a b
 
 ---
 
-## 🚀 Features (v1.0.1)
+## 🚀 Features
 
 - Accepts two numbers from the user
 - Supports basic arithmetic operators:
