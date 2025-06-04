@@ -2,7 +2,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        userInput();
+        Scanner scn = new Scanner(System.in);
+        while (true) {
+            userInput();
+
+            System.out.print("Do you wish to quit [Yes(y)/No(n)]: ");
+            String choice = scn.next();
+
+            if (choice.equalsIgnoreCase("y")) {
+                break;
+            }
+        }
     }
 
     static void userInput() {
