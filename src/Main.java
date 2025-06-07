@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         while (true) {
-            userInput();
+            userInput(scn);
 
             System.out.print("Do you wish to quit [Yes(y)/No(n)]: ");
             String choice = scn.next();
@@ -15,18 +15,17 @@ public class Main {
         }
     }
 
-    static void userInput() {
-        Scanner scn = new Scanner(System.in);
+    static void userInput(Scanner scn) {
         System.out.print("Enter a number: ");
         double a = scn.nextDouble();
         System.out.print("Enter another number: ");
         double b = scn.nextDouble();
         System.out.print("Choose operator [+,-,*,/,%]: ");
         String c = scn.next();
-        function(a, b, c);
+        calculate(a, b, c);
     }
 
-    static void function(double a, double b, String c) {
+    static void calculate(double a, double b, String c) {
         switch (c) {
             case "+":
                 System.out.println("Sum is = " + (a + b));
@@ -38,7 +37,11 @@ public class Main {
                 System.out.println("Product is = " + (a * b));
                 break;
             case "/":
-                System.out.println("Quotient is = " + (a / b));
+                if (a == 0) {
+                    System.out.println("Cannot divide by zero");
+                } else {
+                    System.out.println("Quotient is = " + (a / b));
+                }
                 break;
             case "%":
                 System.out.println("Remainder is = " + (a % b));
